@@ -1,0 +1,21 @@
+[project]
+name = "systemctl-mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Karim Lalani", email = "jimmy00784@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.2.1",
+    "pystemd>=0.13.2",
+]
+
+[project.scripts]
+systemctl-mcp-server = "systemctl_mcp_server.server:main"
+systemctl-mcp-client = "systemctl_mcp_server.client:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
